@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn - Marc Lim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .linkedin-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .linkedin-profile {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+        
+        .linkedin-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-item i {
+            font-size: 2rem;
+            color: #0077b5;
+            margin-bottom: 1rem;
+        }
+        
+        .connect-button {
+            display: inline-block;
+            background-color: #0077b5;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .connect-button:hover {
+            background-color: #005582;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Marc Lim</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="linkedin.html" class="active">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main style="margin-top: 80px;">
+        <div class="linkedin-content">
+            <section class="linkedin-profile">
+                <img src="https://via.placeholder.com/200" alt="Marc Lim" class="profile-image">
+                <h1>Marc Lim</h1>
+                <h2>[Your Professional Title]</h2>
+                <p>California State University, Long Beach</p>
+                <a href="https://www.linkedin.com/in/your-profile" class="connect-button" target="_blank">
+                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                </a>
+            </section>
+
+            <section class="linkedin-stats">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>500+</h3>
+                    <p>Connections</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <h3>10+</h3>
+                    <p>Companies</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>5+</h3>
+                    <p>Skills</p>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2>Professional Summary</h2>
+                <p>Experienced professional with a strong background in [Your Field]. Passionate about [Your Interests] and committed to [Your Professional Goals]. Looking to connect with like-minded professionals and explore new opportunities.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>Experience Highlights</h2>
+                <ul>
+                    <li>[Key Achievement 1]</li>
+                    <li>[Key Achievement 2]</li>
+                    <li>[Key Achievement 3]</li>
+                </ul>
+            </section>
+
+            <section class="about-section">
+                <h2>Skills & Endorsements</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Skill 1</div>
+                    <div class="skill-item">Skill 2</div>
+                    <div class="skill-item">Skill 3</div>
+                    <div class="skill-item">Skill 4</div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2>Let's Connect</h2>
+                <p>I'm always interested in connecting with professionals in my field. Feel free to reach out for:</p>
+                <ul>
+                    <li>Professional networking</li>
+                    <li>Career opportunities</li>
+                    <li>Industry discussions</li>
+                    <li>Collaboration opportunities</li>
+                </ul>
+                <a href="https://www.linkedin.com/in/your-profile" class="connect-button" target="_blank">
+                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Marc Lim. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
