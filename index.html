@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marc Lim - Personal Website</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥️</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,8 +14,8 @@
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="linkedin.html">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/marc-lim-309700250/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://drive.google.com/file/d/1bRmC-bsrh5tUzVQua7Y-sgv_VkC1eXZ5/view?usp=sharing" target="_blank">Resume</a></li>
         </ul>
     </nav>
 
@@ -22,40 +23,110 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>Marc Lim</h1>
-                <h2>CSULB Graduate</h2>
+                <h2>Computer Science Professional</h2>
                 <p class="hero-description">Welcome to my personal website where I showcase my work and professional journey.</p>
             </div>
         </section>
 
+        <section class="quote-section">
+            <div class="quote-text">
+                "The best way to predict the future is to create it."
+            </div>
+            <div class="quote-author">- Peter Drucker</div>
+        </section>
+
         <section class="about-preview">
             <h2>About Me</h2>
-            <p>I am a recent graduate from California State University, Long Beach, passionate about [Your Field/Interest]. My journey in [Your Field] has equipped me with valuable skills and experiences that I'm excited to share.</p>
+            <p>I am a Computer Science professional from California State University, Long Beach, passionate about technology and innovation. My journey in Computer Science has equipped me with valuable skills and experiences that I'm excited to share.</p>
             <a href="about.html" class="cta-button">Learn More About Me</a>
         </section>
 
         <section class="work-preview">
             <h2>My Work</h2>
             <div class="work-grid">
-                <div class="work-item">
-                    <h3>Project 1</h3>
-                    <p>Description of your first significant project or work experience.</p>
+                <a href="xin-hall-of-fame.html" class="work-card-link">
+                <div class="work-card">
+                    <div class="device-mockup laptop">
+                        <img src="C:\school stuff(pdf)\Personal website\Project icon\cpx.webp" alt="Xin's Hall of Fame Icon" class="project-icon">
+                        <span class="transition-icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-tags">
+                            <span class="tag wip">wip</span>
+                            <span class="tag web">web app</span>
+                        </div>
+                        <h3>Xin's Hall of Fame</h3>
+                        <p class="work-desc">Xin's Hall of Fame is a collaborative platform that showcases standout projects and contributors, celebrating creativity, teamwork, and community-driven innovation.
+
+                        </p>
+                    </div>
                 </div>
-                <div class="work-item">
-                    <h3>Project 2</h3>
-                    <p>Description of your second significant project or work experience.</p>
+                </a>
+                <a href="game-match.html" class="work-card-link">
+                <div class="work-card">
+                    <div class="device-mockup phone">
+                        <img src="C:\school stuff(pdf)\Personal website\Project icon\GameMatch Logo Black.png" alt="GameMatch Logo" class="project-icon">
+                        <span class="transition-icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-tags">
+                            <span class="tag wip">wip</span>
+                            <span class="tag mobile">mobile app</span>
+                        </div>
+                        <h3>Game Match</h3>
+                        <p class="work-desc">Game Match is a mobile app that helps users discover personalized video game recommendations through a swipe-based interface and real-time AI matching.
+                        </p></p>
+                    </div>
                 </div>
-                <div class="work-item">
-                    <h3>Project 3</h3>
-                    <p>Description of your third significant project or work experience.</p>
+                </a>
+                <!-- Add more work-card blocks as needed -->
+            </div>
+        </section>
+
+        <section class="wip-section">
+            <h2>Work In Progress</h2>
+            <div class="work-grid">
+                <span class="work-card-link coming-soon">
+                <div class="work-card">
+                    <div class="device-mockup laptop">
+                        <img src="C:\school stuff(pdf)\Personal website\Project icon\1672909956056.jpg" alt="Soles from Jade Icon" class="project-icon">
+                        <span class="transition-icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-tags">
+                            <span class="tag wip">wip</span>
+                            <span class="tag web">web app</span>
+                        </div>
+                        <h3>Soles from Jade</h3>
+                        <p class="work-desc">Short description of your first WIP project.</p>
+                    </div>
                 </div>
+                </span>
+                <span class="work-card-link coming-soon">
+                <div class="work-card">
+                    <div class="device-mockup laptop">
+                        <img src="C:\school stuff(pdf)\Personal website\Project icon\Screenshot 2025-05-23 021054.png" alt="Japan Travel Guide Icon" class="project-icon">
+                        <span class="transition-icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-tags">
+                            <span class="tag wip">wip</span>
+                            <span class="tag web">web app</span>
+                        </div>
+                        <h3>Japan Travel Guide</h3>
+                        <p class="work-desc">Short description of your second WIP project.</p>
+                    </div>
+                </div>
+                </span>
             </div>
         </section>
 
         <section class="contact-preview">
             <h2>Connect With Me</h2>
             <div class="social-links">
-                <a href="linkedin.html" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="resume.html" class="social-link"><i class="fas fa-file-alt"></i> Resume</a>
+                <a href="https://www.linkedin.com/in/marc-lim-309700250/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://drive.google.com/file/d/1bRmC-bsrh5tUzVQua7Y-sgv_VkC1eXZ5/view?usp=sharing" class="social-link" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+                <a href="mailto:marclim45@yahoo.com" class="social-link"><i class="fas fa-envelope"></i> Email</a>
             </div>
         </section>
     </main>

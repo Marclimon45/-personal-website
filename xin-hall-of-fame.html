@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin's Hall of Fame</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .title-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            background-color: #FFFFFF;
+            color: #000;
+        }
+        .title-section img {
+            max-width: 200px;
+            height: auto;
+        }
+        .overview-section, .xin-qin-section, .needs-section, .goals-section, .mockup-section, .features-section, .takeaway-section {
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .overview-section { 
+            background-color: #FFFFFF;
+            color: #000; 
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .overview-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+        .overview-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .xin-qin-section {
+            background-color: #FFD700;
+            color: #000;
+            margin-bottom: 0;
+            border-radius: 0;
+            padding-bottom: 0;
+        }
+        .needs-section { background-color: #fff; color: #000; }
+        .goals-section { background-color: #000; color: #fff; }
+        .mockup-section { background-color: #FFD700; color: #000; }
+        .features-section { background-color: #fff; color: #000; }
+        .takeaway-section { background-color: #000; color: #fff; }
+        .xhf-header {
+            width: 100%;
+            background: #FFFFFF;
+            padding: 2rem 0 0 0;
+        }
+        .xhf-logo-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .xhf-logo {
+            max-height: 48px;
+            width: auto;
+        }
+        .xhf-nav a {
+            color: #111;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-left: 2.5rem;
+            transition: color 0.2s;
+        }
+        .xhf-nav a:hover {
+            color: #FFD700;
+        }
+        .xhf-hero {
+            background: #FFFFFF;
+            padding: 4rem 0 2rem 0;
+            display: flex;
+            justify-content: center;
+        }
+        .xhf-hero-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 1400px;
+            width: 100%;
+            gap: 4rem;
+            padding-right: 52vw;
+            box-sizing: border-box;
+        }
+        .xhf-hero-title {
+            flex: 1;
+        }
+        .xhf-hero-title h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 2rem;
+        }
+        .xhf-hero-subtitle {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 2.5rem;
+        }
+        .xhf-hero-images {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .xhf-cpx-img {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .xhf-cpx-img-abs {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-width: 800px;
+            width: 50vw;
+            min-width: 320px;
+            z-index: 1;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        @media (max-width: 1200px) {
+            .xhf-hero-content {
+                padding-right: 0;
+            }
+        }
+        @media (max-width: 900px) {
+            .xhf-hero-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .xhf-hero-title h1 {
+                font-size: 2.5rem;
+            }
+            .xhf-cpx-img {
+                max-width: 320px;
+            }
+            .xhf-cpx-img-abs {
+                position: static;
+                display: block;
+                margin: 2rem auto 0 auto;
+                width: 90vw;
+                max-width: 320px;
+                min-width: unset;
+            }
+        }
+        .website-app-section {
+            background: #181818;
+            color: #fff;
+            padding: 3rem 0;
+            margin: 0;
+            border-radius: 0;
+            padding-top: 0;
+        }
+        .website-app-flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+        .website-app-left {
+            flex: 2;
+        }
+        .website-app-left h2 {
+            color: #FFC13B;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        .website-app-left p {
+            color: #fff;
+            font-size: 1.25rem;
+            line-height: 1.7;
+        }
+        .website-app-right {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .website-app-right h3 {
+            color: #FFC13B;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        .website-app-icons {
+            display: flex;
+            flex-direction: row;
+            gap: 6rem;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 1.5rem;
+        }
+        .website-app-feature-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 260px;
+        }
+        .website-app-feature-number {
+            color: #FFC13B;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .website-app-emoji {
+            font-size: 3.5rem;
+            display: block;
+            margin-bottom: 0.2rem;
+            line-height: 1;
+            color: #FFC13B;
+        }
+        .website-app-feature-text {
+            font-size: 1.15rem;
+            color: #FFC13B;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 0.5rem;
+            display: block;
+        }
+        @media (max-width: 900px) {
+            .website-app-flex {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .website-app-right {
+                align-items: flex-start;
+            }
+            .website-app-icons {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .website-app-feature-block {
+                min-width: unset;
+            }
+        }
+        .overview-images-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 4rem;
+            margin-bottom: 2.5rem;
+            margin-top: 1rem;
+        }
+        .overview-img {
+            max-width: 380px;
+            width: 100%;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px #0001, 0 1.5px 8px #0002;
+            background: #fff;
+            transition: transform 0.2s;
+        }
+        .overview-img:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 16px 48px #0002, 0 3px 16px #0003;
+        }
+        @media (max-width: 1200px) {
+            .overview-img {
+                max-width: 260px;
+            }
+            .overview-images-row {
+                gap: 2rem;
+            }
+        }
+        @media (max-width: 900px) {
+            .overview-images-row {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .overview-img {
+                max-width: 90vw;
+            }
+        }
+        .img-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s;
+        }
+        .img-modal-content {
+            max-width: 90vw;
+            max-height: 80vh;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px #0008;
+            background: #fff;
+            animation: popIn 0.2s;
+        }
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .img-modal-close {
+            position: absolute;
+            top: 2.5rem;
+            right: 3.5rem;
+            color: #fff;
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            text-shadow: 0 2px 8px #000a;
+            transition: color 0.2s;
+        }
+        .img-modal-close:hover {
+            color: #FFD700;
+        }
+        @media (max-width: 900px) {
+            .img-modal-content {
+                max-width: 98vw;
+                max-height: 60vh;
+            }
+            .img-modal-close {
+                top: 1rem;
+                right: 1.5rem;
+                font-size: 2.2rem;
+            }
+        }
+        .xin-qin-flex {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 2.5rem;
+            margin-top: 1.2rem;
+        }
+        .xin-qin-photo {
+            width: 160px;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 12px #0002;
+            background: #fff;
+            flex-shrink: 0;
+            order: 2;
+        }
+        .xin-qin-info {
+            flex: 1;
+            order: 1;
+        }
+        .xin-qin-school {
+            margin: 0.2rem 0 0.5rem 0;
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .xin-qin-bio {
+            font-size: 1.1rem;
+            color: #222;
+            margin-bottom: 1.1rem;
+        }
+        .xin-qin-role-title {
+            font-size: 1.08rem;
+            color: #222;
+            font-weight: 700;
+            margin: 1.2rem 0 0.3rem 0;
+        }
+        .xin-qin-role {
+            font-size: 1.08rem;
+            color: #000;
+        }
+        @media (max-width: 900px) {
+            .xin-qin-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            .xin-qin-photo {
+                width: 110px;
+                height: 110px;
+            }
+        }
+        .user-needs-section {
+            background: #fff;
+            color: #000;
+            padding: 3rem 0 2rem 0;
+            margin: 0;
+            border-radius: 0;
+        }
+        .user-needs-flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+        .user-needs-left {
+            flex: 2;
+        }
+        .user-needs-left h2 {
+            color: #FFC13B;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+        }
+        .user-needs-left p, .user-needs-left ul, .user-needs-left li {
+            color: #000 !important;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+        .user-needs-left ul {
+            margin-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .user-needs-right {
+            flex: 1.5;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            justify-content: flex-end;
+        }
+        .user-card {
+            background: #232323;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 16px #0004;
+            padding: 1.5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 200px;
+            max-width: 220px;
+        }
+        .user-avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 1rem;
+            border: 3px solid #FFC13B;
+            background: #fff;
+            display: block;
+        }
+        .user-name {
+            color: #FFC13B;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+        .user-quote {
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            font-style: italic;
+        }
+        @media (max-width: 900px) {
+            .user-needs-flex {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .user-needs-right {
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: flex-start;
+            }
+            .user-card {
+                min-width: unset;
+                max-width: 100%;
+            }
+        }
+        .xin-qin-section h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+        }
+        .user-avatar.student {
+            object-position: center top;
+        }
+        .user-avatar.collaborator {
+            object-position: center 20%;
+        }
+        .design-system-section {
+            background: #FFD700;
+            color: #222;
+            padding: 3.5rem 0 3rem 0;
+            border-radius: 0;
+            margin: 0;
+            font-size: 1.08rem;
+            box-shadow: none;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            position: relative;
+            width: 100vw;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .design-system-section, .design-system-section * {
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+        }
+        @media (min-width: 1200px) {
+            .design-system-section {
+                padding-left: 10vw;
+                padding-right: 10vw;
+            }
+        }
+        .design-system-section h2 {
+            color: #0A66C2;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 2.2rem;
+            text-align: left;
+            letter-spacing: 0.5px;
+        }
+        .ds-block h3 {
+            color: #0A66C2;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .ds-icons-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+        .ds-icon {
+            font-size: 2.1rem;
+            color: #0A66C2;
+            background: #f1f1f1;
+            border-radius: 0.5rem;
+            padding: 0.4rem 0.6rem;
+            box-shadow: 0 1px 4px #0001;
+            transition: background 0.2s, color 0.2s;
+            cursor: pointer;
+        }
+        .ds-icon:hover {
+            background: #0A66C2;
+            color: #fff;
+        }
+        .ds-buttons-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+        .mui-btn {
+            font-family: inherit;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1.2rem;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 0.2rem;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 1px 4px #0001;
+        }
+        .mui-btn-contained {
+            background: #0A66C2;
+            color: #fff;
+            font-weight: 600;
+        }
+        .mui-btn-outlined {
+            background: #fff;
+            color: #0A66C2;
+            border: 2px solid #0A66C2;
+            font-weight: 600;
+        }
+        .mui-btn-signin {
+            background: #FFD700;
+            color: #222;
+            font-weight: 600;
+            border: 2px solid #FFD700;
+        }
+        .mui-btn-submit {
+            background: #0A66C2;
+            color: #fff;
+            font-weight: 600;
+        }
+        .mui-btn-add {
+            background: #38b6ff;
+            color: #fff;
+            font-weight: 600;
+        }
+        .mui-btn-remove {
+            background: #ff4d4f;
+            color: #fff;
+            font-weight: 600;
+        }
+        .mui-btn-filter {
+            background: #fff;
+            color: #0A66C2;
+            border: 2px solid #0A66C2;
+            font-weight: 600;
+        }
+        .mui-btn-nav {
+            background: #232323;
+            color: #fff;
+            font-weight: 600;
+        }
+        .mui-btn:hover {
+            box-shadow: 0 2px 8px #0A66C233;
+            opacity: 0.92;
+        }
+        .color-scheme-visual {
+            margin-bottom: 1.5rem;
+        }
+        .color-group {
+            margin-bottom: 1.1rem;
+        }
+        .color-group-label {
+            color: #222;
+            font-size: 1.08rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .color-row {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+        .color-circle {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #eee;
+            box-shadow: 0 2px 8px #0001;
+        }
+        .design-system-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .design-system-block {
+            flex: 1;
+            max-width: calc(50% - 1rem);
+        }
+        .design-system-block h3 {
+            color: #0A66C2;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .color-scheme {
+            margin-bottom: 1.5rem;
+        }
+        .color-circles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .color-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+        .font-scheme {
+            margin-bottom: 1.5rem;
+        }
+        .font-group {
+            margin-bottom: 1.1rem;
+        }
+        .font-group h4 {
+            color: #0A66C2;
+            font-size: 1.08rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .font-display {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .font-name {
+            color: #0A66C2;
+            font-size: 1rem;
+            font-weight: 500;
+            min-width: 120px;
+        }
+        .font-example {
+            color: #0A66C2;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0.2rem 0.5rem;
+        }
+        .user-flow-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px #0001, 0 1.5px 8px #0002;
+            background: #fff;
+            transition: transform 0.2s;
+        }
+        .user-flow-img:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 16px 48px #0002, 0 3px 16px #0003;
+        }
+        .ds-icons-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px #0001, 0 1.5px 8px #0002;
+            background: #fff;
+            transition: transform 0.2s;
+        }
+        .navbar-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .navbar-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px #0001, 0 1.5px 8px #0002;
+            background: #fff;
+            transition: transform 0.2s;
+        }
+        .features-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .feature-card {
+            flex: 1;
+            max-width: calc(50% - 1rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px #0001, 0 1.5px 8px #0002;
+            background: #fff;
+            transition: transform 0.2s;
+            margin-bottom: 1rem;
+        }
+        .feature-info {
+            text-align: center;
+        }
+        .feature-info h3 {
+            color: #0A66C2;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .feature-info p {
+            color: #222;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Marc Lim</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://www.linkedin.com/in/marc-lim-309700250/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://drive.google.com/file/d/1bRmC-bsrh5tUzVQua7Y-sgv_VkC1eXZ5/view?usp=sharing" target="_blank">Resume</a></li>
+        </ul>
+    </nav>
+    <section class="xhf-hero" style="position: relative;">
+        <div class="xhf-hero-content">
+            <div class="xhf-hero-title">
+                <h1>Xin's Hall of Fame</h1>
+                <p class="xhf-hero-subtitle">Xin's Hal  l of Fame is a web-based platform that celebrates standout projects and top contributors within a collaborative community. Designed to highlight creativity, effort, and teamwork, it showcases user-submitted projects that meet criteria such as innovation, impact, and design quality. Each featured entry includes a project summary, contributor profiles, and visual highlights to inspire others and recognize excellence. The platform also encourages community growth by motivating participants to engage, collaborate, and strive for recognition through meaningful contributions.                </p>
+            </div>
+        </div>
+        <img src="CPX/cover.png" alt="Project Cover" class="xhf-cpx-img xhf-cpx-img-abs">
+    </section>
+    <div class="overview-section" style="background-color: #FFFFFF;">
+        <div class="overview-images-row">
+            <img src="CPX/home.png" alt="Home Screenshot" class="overview-img" onclick="openModal('CPX/home.png')">
+            <img src="CPX/profile.png" alt="Profile Screenshot" class="overview-img" onclick="openModal('CPX/profile.png')">
+            <img src="CPX/project.png" alt="Project Screenshot" class="overview-img" onclick="openModal('CPX/project.png')">
+        </div>
+        <h2>Overview</h2>
+        <p>As the Lead Developer and Designer for this 5-week project, I collaborated with a small team to design and build a fully functional website for Professor Xin Qin's research group at California State University, Long Beach. I led the frontend and backend development while working closely with Professor Qin to understand the group's goals, structure, and academic focus. The site was built to highlight ongoing research, showcase publications and team members, and provide an accessible platform for student outreach and collaboration. Throughout the project, I applied user-focused design principles, implemented responsive layouts, and ensured the site aligned with the professionalism of an academic research environment.</p>
+        <div id="imgModal" class="img-modal" onclick="closeModal(event)">
+            <span class="img-modal-close" onclick="closeModal(event)">&times;</span>
+            <img class="img-modal-content" id="imgModalContent">
+        </div>
+    </div>
+    <div class="xin-qin-section">
+        <h2>Xin Qin</h2>
+        <h3 class="xin-qin-school">CSULB</h3>
+        <div class="xin-qin-flex">
+            <img src="CPX/xin qin.jpg" alt="Xin Qin" class="xin-qin-photo">
+            <div class="xin-qin-info">
+                <p class="xin-qin-bio">Xin qin is a  Assistant Professor in the Department of Computer Engineering and Computer Science (CECS) at California State University, Long Beach (CSULB). Her research interests are in ensuring the safety of cyber-physical systems through formal methods, predictive monitoring, verification, and machine learning.</p>
+                <h4 class="xin-qin-role-title">Role</h4>
+                <p class="xin-qin-role">As the lead developer and designer, I worked closely with Professor Xin Qin to create a research group website that accurately reflected her academic work and vision. I was responsible for building the site architecture, designing the user interface, and developing features to showcase publications, research projects, and team members. Throughout the process, I translated her goals into a responsive, accessible digital experience tailored for students, collaborators, and academic peers.</p>
+            </div>
+        </div>
+    </div>
+    <section class="website-app-section">
+        <div class="website-app-flex">
+            <div class="website-app-left">
+                <h2>Research Group Needs</h2>
+                <p>We began this project after meeting with Professor Xin Qin, who asked us to design and develop a website to represent her research group at California State University, Long Beach. The goal was to create a platform that showcased her team's work, made their publications and projects easily accessible, and helped attract new collaborators and student researchers. After our initial meeting, we reviewed her team's structure, ongoing projects, and key objectives to shape a clear direction for the site's purpose and features.</p>
+            </div>
+            <div class="website-app-right">
+                <h3>A Website Application</h3>
+                <div class="website-app-icons">
+                    <div class="website-app-feature-block">
+                        <span class="website-app-feature-number">1</span>
+                        <span class="website-app-emoji">🧠</span>
+                        <span class="website-app-feature-text">Showcase research projects, publications, and lab members</span>
+                    </div>
+                    <div class="website-app-feature-block">
+                        <span class="website-app-feature-number">2</span>
+                        <span class="website-app-emoji">📬</span>
+                        <span class="website-app-feature-text">Provide a clear way for students and collaborators to connect</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="user-needs-section">
+        <div class="user-needs-flex">
+            <div class="user-needs-left">
+                <h2>User Needs</h2>
+                <p>Based on our research and feedback from Professor Xin Qin's group, we identified key user needs for the new website. The platform should make it easy for students and collaborators to:
+                <ul>
+                    <li>Discover ongoing research projects and publications</li>
+                    <li>Connect with lab members and faculty</li>
+                    <li>Access resources and updates relevant to their academic interests</li>
+                </ul>
+                </p>
+            </div>
+            <div class="user-needs-right">
+                <div class="user-card">
+                    <img src="CPX/fake1.jpg" alt="User 1" class="user-avatar student">
+                    <div class="user-info">
+                        <div class="user-name">Student</div>
+                        <div class="user-quote">“I want to easily find research opportunities and connect with professors in my field.”</div>
+                    </div>
+                </div>
+                <div class="user-card">
+                    <img src="CPX/fake2.jpg" alt="User 2" class="user-avatar collaborator">
+                    <div class="user-info">
+                        <div class="user-name">Collaborator</div>
+                        <div class="user-quote">“I need a clear way to see the group's latest work and reach out for potential partnerships.”</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="design-system-section">
+        <h2>Design System</h2>
+        <div class="design-system-grid">
+            <div class="ds-block">
+                <h3>Colors</h3>
+                <div class="color-scheme">
+                    <div class="color-group">
+                        <h4>Main Colors</h4>
+                        <div class="color-circles">
+                            <div class="color-circle" style="background-color: #000;" title="Black"></div>
+                            <div class="color-circle" style="background-color: #fff; border: 1px solid #ddd;" title="White"></div>
+                            <div class="color-circle" style="background-color: #FFD700;" title="Gold"></div>
+                        </div>
+                    </div>
+                    <div class="color-group">
+                        <h4>Complementary</h4>
+                        <div class="color-circles">
+                            <div class="color-circle" style="background-color: #f1f1f1;" title="Light Gray"></div>
+                            <div class="color-circle" style="background-color: #999;" title="Dark Gray"></div>
+                            <div class="color-circle" style="background-color: #0A66C2;" title="LinkedIn Blue"></div>
+                        </div>
+                    </div>
+                    <div class="color-group">
+                        <h4>Neutrals</h4>
+                        <div class="color-circles">
+                            <div class="color-circle" style="background-color: #f8f8f8;" title="Background"></div>
+                            <div class="color-circle" style="background-color: #e0e0e0;" title="Border"></div>
+                            <div class="color-circle" style="background-color: #666;" title="Text"></div>
+                        </div>
+                    </div>
+                    <div class="color-group">
+                        <h4>Accent Colors</h4>
+                        <div class="color-circles">
+                            <div class="color-circle" style="background-color: #4CAF50;" title="Success"></div>
+                            <div class="color-circle" style="background-color: #f44336;" title="Error"></div>
+                            <div class="color-circle" style="background-color: #2196F3;" title="Info"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ds-block">
+                <h3>Fonts</h3>
+                <div class="font-scheme">
+                    <div class="font-group">
+                        <h4>Primary Font</h4>
+                        <div class="font-display">
+                            <span class="font-name">Roboto</span>
+                            <span class="font-example" style="font-family: 'Roboto', sans-serif;"></span>
+                        </div>
+                    </div>
+                    <div class="font-group">
+                        <h4>System Fonts</h4>
+                        <div class="font-display">
+                            <span class="font-name">-apple-system</span>
+                            <span class="font-example" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;"></span>
+                        </div>
+                        <div class="font-display">
+                            <span class="font-name">BlinkMacSystemFont</span>
+                            <span class="font-example" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;"></span>
+                        </div>
+                        <div class="font-display">
+                            <span class="font-name">Segoe UI</span>
+                            <span class="font-example" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;"></span>
+                        </div>
+                        <div class="font-display">
+                            <span class="font-name">Helvetica Neue</span>
+                            <span class="font-example" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;"></span>
+                        </div>
+                        <div class="font-display">
+                            <span class="font-name">Arial</span>
+                            <span class="font-example" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ds-block">
+            <h3>Icons</h3>
+            <img src="CPX/icons.png" alt="Design System Icons" class="ds-icons-img">
+        </div>
+        <div class="ds-block">
+            <h3>Buttons</h3>
+            <div class="ds-buttons-row">
+                <button class="mui-btn mui-btn-contained">Contained</button>
+                <button class="mui-btn mui-btn-outlined">Outlined</button>
+                <button class="mui-btn mui-btn-signin">Sign in with SSO</button>
+                <button class="mui-btn mui-btn-submit">Submit</button>
+                <button class="mui-btn mui-btn-add">+ Add</button>
+                <button class="mui-btn mui-btn-remove">- Remove</button>
+                <button class="mui-btn mui-btn-filter">Filter</button>
+                <button class="mui-btn mui-btn-nav">Navigate</button>
+            </div>
+        </div>
+        <div class="ds-block">
+            <h3>Navigation Bar</h3>
+            <div class="navbar-images">
+                <img src="CPX/hometab.png" alt="Home Tab" class="navbar-img">
+                <img src="CPX/contributiontab.png" alt="Contribution Tab" class="navbar-img">
+                <img src="CPX/buckettab.png" alt="Bucket Tab" class="navbar-img">
+                <img src="CPX/pptab.png" alt="Project Tab" class="navbar-img">
+                <img src="CPX/notab.png" alt="No Tab Selected" class="navbar-img">
+            </div>
+        </div>
+    </div>
+    <div class="mockup-section">
+        <h2>Mockup</h2>
+        <h2>Userflow</h2>
+        <p>I created a user flow to understand each step that the user would take when using the health tracker.</p>
+        <img src="CPX/UserFlow.png" alt="User Flow Diagram" class="user-flow-img">
+        <div class="sketches-flex">
+            <div class="sketches-left">
+                <h2>Sketches</h2>
+                <p>Initial sketches of my design were created for me to get a vision of what the Website could look like.</p>
+            </div>
+            <div class="sketches-right">
+                <div class="sketches-box">
+                    <img src="CPX/mock1.jpg" alt="Sketch 1" class="sketch-img">
+                    <img src="CPX/mock2.jpg" alt="Sketch 2" class="sketch-img">
+                    <img src="CPX/mock3.jpg" alt="Sketch 3" class="sketch-img">
+                    <img src="CPX/mock4.jpg" alt="Sketch 4" class="sketch-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features-section">
+        <h2>Features</h2>
+        <div class="features-flex">
+            <div class="feature-card">
+                <img src="CPX/feature1.jpg" alt="Feature 1" class="feature-img">
+                <div class="feature-info">
+                    <h3>Bucket</h3>
+                    <p>The Bucket page serves as a collaborative hub where users can share and explore innovative ideas. It's designed to inspire creativity and foster community engagement by allowing users to contribute concepts, interact through comments, and potentially develop these ideas into full-fledged projects. </p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <img src="CPX/feature2.jpg" alt="Feature 2" class="feature-img">
+                <div class="feature-info">
+                    <h3>Projects and Publications</h3>
+                    <p>The Projects and Publications page showcases the group's research projects and published works. It provides a comprehensive overview of their academic achievements and research contributions, making it easy for users to explore and learn more about the group's work.The Projects & Publication page serves as a dynamic showcase of completed projects, allowing users to explore and learn from diverse initiatives across various disciplines.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="takeaway-section">
+        <h2>Takeaway</h2>
+        <div class="takeaway-flex">
+            <div class="takeaway-left">
+                <p>
+                    Building this website for my professor was a rewarding and transformative journey. From the initial brainstorming sessions to the final deployment, I learned the importance of user-centered design, clear communication, and iterative problem-solving. Collaborating with my professor and understanding her vision for a platform that could serve future students and researchers pushed me to refine my technical and design skills. I'm proud that this site will be a resource for her group for years to come, and I hope it inspires creativity, collaboration, and innovation within the academic community.
+                </p>
+                <a href="https://xin-s-hall-of-fame.web.app/" class="cta-button" target="_blank">Try the Website</a>
+            </div>
+        </div>
+    </div>
+    <script>
+    function openModal(src) {
+        var modal = document.getElementById('imgModal');
+        var modalImg = document.getElementById('imgModalContent');
+        modal.style.display = 'flex';
+        modalImg.src = src;
+    }
+    function closeModal(event) {
+        if (event.target.classList.contains('img-modal') || event.target.classList.contains('img-modal-close')) {
+            document.getElementById('imgModal').style.display = 'none';
+        }
+    }
+    </script>
+</body>
+</html> 

@@ -4,38 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Marc Lim</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥️</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .about-section {
-            margin-bottom: 3rem;
-        }
-        
-        .about-section h2 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .skill-item {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 5px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -43,46 +14,110 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="linkedin.html">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/marc-lim-309700250/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://drive.google.com/file/d/1bRmC-bsrh5tUzVQua7Y-sgv_VkC1eXZ5/view?usp=sharing" target="_blank">Resume</a></li>
         </ul>
     </nav>
 
-    <main style="margin-top: 80px;">
+    <main>
         <div class="about-content">
             <section class="about-section">
                 <h2>About Me</h2>
-                <p>I am Marc Lim, a recent graduate from California State University, Long Beach. I am passionate about [Your Field/Interest] and dedicated to [Your Professional Goals]. My journey in [Your Field] has been marked by continuous learning and growth.</p>
+                <div class="about-header">
+                    <div class="selfie-container">
+                        <img src="Photos/Selfie.jpg" alt="Marc Lim" class="selfie">
+                    </div>
+                    <div class="about-text">
+                        <p>I am Marc Lim, a computer science graduate from California State University, Long Beach (CSULB). I am passionate about both software implementation and innovation, and am dedicated to creating impactful solutions. My journey in computer science has been marked by continuous learning and growth.</p>
+                    </div>
+                </div>
             </section>
 
-            <section class="about-section">
-                <h2>Education</h2>
-                <p>California State University, Long Beach<br>
-                [Your Degree] in [Your Major]<br>
-                Graduated: [Year]</p>
+            <section class="about-section education-section">
+                <div class="education-flex">
+                    <div class="education-text">
+                        <h2>Education</h2>
+                        <p>California State University, Long Beach<br>
+                        Bachelor of Science in Computer Science<br>
+                        Graduated: 2025</p>
+                    </div>
+                    <div class="education-logo">
+                        <img src="Photos/CSULB-logo.png" alt="CSULB Logo">
+                    </div>
+                </div>
             </section>
 
-            <section class="about-section">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">Skill 1</div>
-                    <div class="skill-item">Skill 2</div>
-                    <div class="skill-item">Skill 3</div>
-                    <div class="skill-item">Skill 4</div>
+            <section class="about-section publication-section">
+                <div class="education-flex">
+                    <div class="education-text">
+                        <h2>Publications</h2>
+                        <p><strong>Research Report: Automating Research Idea Identification and Summarization Using Large Language Model</strong></p>
+                        <a href="C:\school stuff(pdf)\Personal website\report.pdf" class="download-btn skyblue-btn" download>Download PDF</a>
+                    </div>
                 </div>
             </section>
 
             <section class="about-section">
-                <h2>Interests</h2>
-                <p>When I'm not working, I enjoy [Your Interests/Hobbies]. I believe in maintaining a healthy work-life balance and continuously expanding my knowledge in both professional and personal areas.</p>
+                <h2>Skills</h2>
+                <div class="skills-category">
+                    <h3>Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-cuttlefish"></i> C++</div>
+                        <div class="skill-item"><i class="fab fa-java"></i> Java</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+                        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fab fa-google"></i> Dart</div>
+                        <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+                        <div class="skill-item"><i class="fab fa-js-square"></i> JavaScript</div>
+                        <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
+                        <div class="skill-item"><i class="fab fa-android"></i> Kotlin</div>
+                        <div class="skill-item"><span class="custom-icon">λ</span> Haskell</div>
+                        <div class="skill-item"><span class="custom-icon">Σ</span> Prolog</div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fas fa-database"></i> MySQL</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> PostgreSQL</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> SQLite</div>
+                        <div class="skill-item"><span class="custom-icon">R</span> Raptor</div>
+                        <div class="skill-item"><span class="custom-icon">V</span> Vivado</div>
+                        <div class="skill-item"><span class="custom-icon">D</span> Dev-C++</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> MongoDB</div>
+                        <div class="skill-item"><i class="fab fa-figma"></i> Figma</div>
+                        <div class="skill-item"><i class="fab fa-vuejs"></i> Vite</div>
+                        <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+                        <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hobbies-section">
+                <div class="gallery-description">
+                    I love animals, to draw and photograph, hang out or play video games with my friends, eat food, and chill with my pet cats!
+                </div>
+                <div class="hobbies-strip-container">
+                    <div class="hobbies-strip">
+                        <img src="Spin/scooby.jpg" alt="Scooby">
+                        <img src="Spin/TokyoTowerr.jpg" alt="Tokyo Tower">
+                        <img src="Spin/capybara.jpg" alt="Capybara">
+                        <img src="Spin/fuji.jpg" alt="Fuji">
+                        <img src="Spin/gundam.jpg" alt="Gundam">
+                        <img src="Spin/lib.jpg" alt="Library">
+                        <img src="Spin/korea.jpg" alt="Korea">
+                        <img src="Spin/image0.jpg" alt="Gallery Image">
+                    </div>
+                    <div class="hobbies-strip-fade left"></div>
+                    <div class="hobbies-strip-fade right"></div>
+                </div>
             </section>
 
             <section class="about-section">
                 <h2>Contact</h2>
                 <p>Feel free to reach out to me through:</p>
                 <div class="social-links">
-                    <a href="linkedin.html" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="mailto:marclim45@yahoo.com" class="social-link"><i class="fas fa-envelope"></i> Email</a>
                 </div>
             </section>
         </div>
